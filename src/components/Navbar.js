@@ -4,8 +4,6 @@ import Images from '../assets/constant/images';
 const Hero = () => {       
         return (
             <div className="relative bg-background ">
-       
-    
         <header className="relative py-4 md:py-6">
             <div className="container px-4 mx-auto sm:px-6  lg:px-10">
                 <div className="flex items-center justify-between">
