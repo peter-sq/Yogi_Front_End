@@ -149,7 +149,7 @@ const Hero = () => {
                 md:top-[12%] md:left-[20%]         
                 lg:top-[1%] lg:left-[85%]"
                 />
-                {/* yuanCoin */}
+               
                 <img
                 src={Images.yuanCoin}
                 alt="yuanCoin"
