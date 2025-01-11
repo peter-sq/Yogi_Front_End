@@ -2,4 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+.app{
+  height:100%;
+  width: 100%;
+  @apply text-sm;
+  @apply bg-gray-500;
+  @apply text-gray-900;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;500;600&display=swap');

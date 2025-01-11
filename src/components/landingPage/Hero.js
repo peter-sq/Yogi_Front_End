@@ -1,11 +1,18 @@
-import React from 'react';
-import Images from '../assets/constant/images';
+import React, {useEffect} from 'react';
+import Images from '../../assets/constant/images';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
-const Hero = () => {       
+const Hero = () => {      
+    useEffect(() => {
+        Aos.init();
+        Aos.refresh();
+
+    }, []) 
         return (
             <div className="relative bg-background ">
         <header className="relative py-4 md:py-6">
-            <div className="container px-4 mx-auto sm:px-6  lg:px-10">
+            <div className="container px-4 mx-auto sm:px-6  lg:px-28">
                 <div className="flex items-center justify-between">
                     <div className="flex-shrink-0">
                         <a href="#" title="" className="flex rounded outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
@@ -47,9 +54,11 @@ const Hero = () => {
         <div className="grid max-w-lg grid-cols-1 mx-auto lg:max-w-full lg:grid-cols-2 gap-y-12 lg:gap-x-8">
         
         {/* Text Section */}
+        <div data-aos="fade-up">
         <div>
             <div className="text-center lg:text-left">
-            <h1 className="text-4xl font-extrabold tracking-wide leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-6xl font-helveticaNeue">
+            <h1 className="text-4xl font-extrabold tracking-wide leading-tight lg:tracking-normal
+             text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-6xl lg:font-extrabold font-sans">
                 We Buy Crypto & Gift Cards <span className="text-primary">Instantly!</span>
             </h1>
             <p className="mt-2 text-base text-gray-600 sm:mt-8 font-poppins">
@@ -111,19 +120,23 @@ const Hero = () => {
             </div>
             </div>
         </div>
+        </div>
 
         {/* Image Section */}
+        <div data-aos="fade-left">
         <div className="relative flex justify-center items-center">
-            <img
+      
+        <img
             className="
-            w-full ml-[5rem] max-w-xs
-            sm:w-[100%] sm:ml-[5rem] sm:my-[-30rem] 
-            md:w-[70%] md:ml-[8rem] md:my-[-20rem]
-            lg:w-[80%] lg:ml-[20rem] lg:my-[-22rem]
-            object-cover"
+                w-full  sm:max-w-md md:max-w-lg lg:max-w-[30rem]
+                ml-auto mr-auto lg:ml-[20rem] md:ml-[21rem]
+                sm:mt-[-10%] md:mt-[-5%] lg:mt-[-8.5rem]
+                object-cover"
             src={Images.happyWoman}
             alt="Happy Woman"
             />
+          
+
              {/* Coin Images */}
             <div className="absolute w-full h-full">
                 {/* blueryCoin */}
@@ -131,9 +144,9 @@ const Hero = () => {
                     src={Images.blueryCoin}
                     alt="blueryCoin"
                     className="
-                        w-20 h-20 absolute top-[10%] left-[10%]
-                         sm:top-[15%] sm:left-[40%] md:top-[12%] md:left-[20%] 
-                         lg:top-[13%] lg:left-[40%] !important" 
+                        w-20 h-20 absolute top-[6%] left-[10%]
+                         sm:top-[6%] sm:left-[40%] md:top-[12%] md:left-[20%] 
+                         lg:top-[13%] lg:left-[30%] " 
                     />
 
                 {/* ethCoin */}
@@ -144,8 +157,8 @@ const Hero = () => {
                 w-20 h-20 absolute
                 top-[16%] left-[75%]               
                 sm:top-[15%] sm:left-[55%]         
-                md:top-[12%] md:left-[20%]         
-                lg:top-[1%] lg:left-[85%]"
+                md:top-[12%] md:left-[90%]         
+                lg:top-[-2%] lg:left-[88%]"
                 />
                
                 <img
@@ -154,10 +167,11 @@ const Hero = () => {
                 className="w-20 h-20 absolute 
                 top-[68%] left-[8%]
                 sm:top-[15%] sm:left-[55%]         
-                md:top-[12%] md:left-[20%]         
-                lg:top-[72%] lg:left-[40%]"
+                md:top-[56%] md:left-[20%]         
+                lg:top-[56%] lg:left-[30%]"
                 />
             </div>
+        </div>
         </div>
 
         </div>
