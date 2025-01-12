@@ -13,6 +13,7 @@ module.exports = {
          background: '#F5F5F5',
          primary: '#0582CA',
          buttonPrimary: '#0582CA',
+         feature: '#E6E6E6',
       },
       screens: {
         sm: '640px',
