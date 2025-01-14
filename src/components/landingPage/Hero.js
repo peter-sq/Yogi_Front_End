@@ -49,7 +49,7 @@ const Hero = () => {
             </div>
         </header>
     
-        <section className="relative py-12 sm:py-16  lg:py-20 lg:pb-36">
+        <section className="relative py-12 sm:py-16  lg:py-20 ">
     <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="grid max-w-lg grid-cols-1 mx-auto lg:max-w-full lg:grid-cols-2 gap-y-12 lg:gap-x-8">
         
