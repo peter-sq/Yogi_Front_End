@@ -10,10 +10,10 @@ module.exports = {
         sans: ['sans-serif'], 
       },
       colors: {
-         background: '#F5F5F5',
+         background: '#FAFAFA', 
          primary: '#0582CA',
          buttonPrimary: '#0582CA',
-         feature: '#E6E6E6',
+         feature: '#EAEAEA',
       },
       screens: {
         sm: '640px',
