@@ -13,13 +13,13 @@ const GetStarted = () => {
      text-3xl tracking-normal leading-16 text-gray-900'>
           Get Started with Yogi, <br/>In 3 Easy Steps</p>
     </div>
-    <div className='flex flex-col md:flex-row px-6 py-8 md:px-14 md:py-14 lg:px-28 gap-y-8 md:gap-y-0 md:gap-x-16 lg:gap-x-40'>
+    <div className='flex flex-col md:flex-row px-6 py-8 md:px-14 md:py-14 lg:px-28 gap-y-8 md:gap-y-0 md:gap-x-16 lg:gap-x-60'>
     <div className='flex-none'>
         <div className='bg-feature border-6 px-8 py-12 rounded-[2rem]'>
-            <img className='w-48 md:w-64' src={Images.mobilephone} alt='Mobile phone' />
+            <img className='w-full md:w-[25rem] md:h-[35rem]' src={Images.mobilephone} alt='Mobile phone' />
         </div>
-        <div className='relative -top-20 md:-top-32 md:left-40'>
-            <img className='h-20 md:h-[10rem] w-auto' src={Images.graphychat} alt='Graphy chat' />
+        <div className='relative -top-20 md:-top-32 md:left-60'>
+            <img className='h-[10rem] md:h-[13rem] md:w-[70%] w-[55%]' src={Images.graphychat} alt='Graphy chat' />
         </div>
     </div>
     <div className='flex-1'>
@@ -62,6 +62,11 @@ const GetStarted = () => {
                     </div>
                 </div>
             ))}
+           <div className='flex flex-row gap-4 py-6 px-6'>
+            <button aria-label="Get started with Yogi" className='w-full md:w-auto px-6 h-12 text-white bg-blue-600 hover:bg-white hover:text-primary border rounded-lg font-poppins text-lg transition-all duration-300'>Get Started</button>
+            <button aria-label="View pricing options" className='w-full md:w-auto px-6 h-12 text-primary bg-white hover:text-white hover:bg-blue-600 border rounded-lg font-poppins text-lg transition-all duration-300'>View Pricing</button>
+            </div>
+
         </div>
     </div>
     </div>
