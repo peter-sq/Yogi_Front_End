@@ -11,10 +11,10 @@ const Pricing = () => {
   const [marketData, setMarketData] = useState([]);
   const [error, setError] = useState(null);
 
-  const navigate = useNavigate();
+const navigate = useNavigate();
 
 //fetch data from API
-    useEffect(() => {
+useEffect(() => {
         const fetchMarketData = async () => {
         try {
             setLoading(true);
@@ -35,19 +35,19 @@ const Pricing = () => {
     }, []);
 
       // Slice the data to show only the first 20 items
-      const displayedData = marketData.slice(0, 20);
+const displayedData = marketData.slice(0, 20);
   
-  //handle sort table
-  const handleSort = (key) => {
-    let direction = "ascending";
-    if (sortConfig.key === key && sortConfig.direction === "ascending") {
-      direction = "descending";
-    }
-    setSortConfig({ key, direction });
-  };
+        //handle sort table
+const handleSort = (key) => {
+          let direction = "ascending";
+          if (sortConfig.key === key && sortConfig.direction === "ascending") {
+            direction = "descending";
+          }
+          setSortConfig({ key, direction });
+        };
 
   //sort the table 
-  const sortedMarketData = React.useMemo(() => {
+const sortedMarketData = React.useMemo(() => {
     let sortableMarketData = [...marketData];
     if (sortConfig.key !== null){
       sortableMarketData.sort((a, b) => {
@@ -64,7 +64,7 @@ const Pricing = () => {
     return sortableMarketData;
   }, [marketData, sortConfig]);
 
-  const filteredMarketData = React.useMemo(() => {
+const filteredMarketData = React.useMemo(() => {
     if (!searchTerm) return sortedMarketData;
     
     return sortedMarketData.filter((marketData) =>
@@ -74,10 +74,7 @@ const Pricing = () => {
     );
   }, [sortedMarketData, searchTerm]);
   
-  
-
-  
-  const getSortIcon = (key) => {
+const getSortIcon = (key) => {
     if (sortConfig.key === key) {
       return sortConfig.direction === "ascending" ? <FaSortUp /> : <FaSortDown />;
     }
