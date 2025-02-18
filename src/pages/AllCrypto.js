@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import Header from "../components/landingPage/Header";
 
 
 const AllCrypto = () => {
@@ -8,7 +9,8 @@ const AllCrypto = () => {
 
   return (
     <div className="min-h-screen bg-background text-white p-8">
-      <div className="max-w-7xl mx-auto bg-gray-800 rounded-lg shadow-2xl overflow-hidden">
+      <Header/>
+      <div className="max-w-7xl mx-auto bg-gray-800 rounded-lg shadow-2xl overflow-hidden py-16">
         <div className="p-6">
           <h1 className="text-3xl font-bold mb-6 font-sans">All Cryptocurrencies</h1>
           <div className="overflow-x-auto">
