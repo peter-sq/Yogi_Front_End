@@ -9,14 +9,29 @@ function LineChart({ historicalCoinData }) {
     }
   }, [historicalCoinData]);
 
+  const options = {
+    title: "Price - Last 24 Hours",
+    curveType: "function",
+    legend: { position: "bottom" },
+    colors: ["#007BFF"], // Primary color (blue)
+    backgroundColor: "#F8F9FA", // Light background
+    hAxis: {
+      textStyle: { color: "#333" }, // Dark text
+    },
+    vAxis: {
+      textStyle: { color: "#333" },
+    },
+  };
+
   return (
-    <div>
+    <div className="flex justify-center items-right p-10">
       {historicalCoinData && historicalCoinData.length > 1 ? (
         <Chart
           chartType="LineChart"
           width="100%"
-          height="30rem"
+          height="500px"
           data={historicalCoinData}
+          options={options}
         />
       ) : (
         <p>Loading chart data...</p>

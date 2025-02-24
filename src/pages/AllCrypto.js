@@ -1,6 +1,9 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import Header from "../components/landingPage/Header";
+import Footer from "../components/landingPage/Footer";
+
+
 
 
 const AllCrypto = () => {
@@ -17,7 +20,7 @@ const AllCrypto = () => {
             <table className="w-full border-collapse">
               <thead>
                 <tr className="bg-gray-700">
-                  {["Rank", "Coin", "Price", "24H Change", "Market Cap"].map((header) => (
+                  {["Rank", "Coin", "Price", "24H Change", "Market Cap", "Action"].map((header) => (
                     <th key={header} className="p-3 text-left font-semibold">
                       {header}
                     </th>
@@ -49,6 +52,14 @@ const AllCrypto = () => {
                       {Math.floor(marketData.price_change_percentage_24h * 100) / 100}
                     </td>
                     <td className="p-3">${marketData.market_cap.toLocaleString()}</td>
+                    <td className="p-3 text-center">
+                        <Link to = {`/coin/${marketData.id}`}
+                          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                          aria-label={`View profile of ${marketData.name}`}
+                        >
+                          View Chat
+                        </Link>
+                      </td>
                   </tr>
                 ))}
               </tbody>
@@ -56,6 +67,9 @@ const AllCrypto = () => {
           </div>
         </div>
       </div>
+      <div className="pt-10">
+      <Footer/>
+    </div>
     </div>
   );
 };

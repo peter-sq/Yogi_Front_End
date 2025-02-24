@@ -4,6 +4,7 @@ import { FaSpinner } from "react-icons/fa";
 import axios from 'axios';
 import LineChart from '../components/LineCharts/LineChart';
 import Header from '../components/landingPage/Header';
+import Footer from '../components/landingPage/Footer';
 
 function Coin() {
     const { coinId } = useParams();
@@ -65,8 +66,8 @@ function Coin() {
                 </div>
             ) : (
                 <div>
-                    <div className="flex flex-col items-center p-32">
-                        <img src={coinData.image.large} alt={coinData.name} className="w-32 h-32" />
+                    <div className="flex flex-col items-center pt-[8rem] pb-[1rem] ">
+                        <img src={coinData.image.large} alt={coinData.name} className="w-20 h-20" />
                         <p className="text-lg font-bold mt-2">{coinData.name}</p>
                     </div>
                     <div>
@@ -77,27 +78,41 @@ function Coin() {
           )}
 
                     </div>
-                    <div className='flex flex-col items-center'>
-                        <p className='text-2xl font-bold'>Market Data</p>
-                        <div className='flex flex-col items-center'>
-                            <p>Symbol: {coinData.symbol}</p>
-                            <p>Current Price: {coinData.current_price}</p>
-                            <p>Market Cap: {coinData.market_cap}</p>
-                            <p>24 Hours High: {coinData.market_data.high_24h}</p>
-                            <p>24 Hours Low: {coinData.low_24h}</p>
-                            <p>Market Market Rank: {coinData.market_cap_rank}</p>
-                            <p>Current Price: {coinData.current_price} </p>
-                            <p>Market Cap: {coinData.market_cap} </p>
-                            <p>24 Hours High: {}</p>
-                            <p>24 Hours Low: </p>
-
+                    <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-[58rem] mx-auto">
+                      <h2 className="text-2xl font-bold text-center text-primary">Market Data</h2>
+      
+                        <div className="mt-4 space-y-2 text-gray-700">
+                            <p className="flex justify-between border-b pb-2 text-xl">
+                            <span className="font-medium">Symbol:</span> 
+                            <span className="uppercase">{coinData.symbol}</span>
+                            </p>
+                            <p className="flex justify-between border-b pb-2 text-xl">
+                            <span className="font-medium">Current Price:</span> 
+                            <span>${coinData.market_data.current_price.usd.toLocaleString()}</span>
+                            </p>
+                            <p className="flex justify-between border-b pb-2 text-xl">                  
+                            <span className="font-medium">Market Cap:</span> 
+                            <span>${coinData.market_data.market_cap.usd.toLocaleString()}</span>
+                            </p>
+                            <p className="flex justify-between border-b pb-2 text-xl">
+                            <span className="font-medium">24h High:</span> 
+                            <span>${coinData.market_data.high_24h.usd.toLocaleString()}</span>
+                            </p>
+                            <p className="flex justify-between border-b pb-2 text-xl">
+                            <span className="font-medium">24h Low:</span> 
+                            <span>${coinData.market_data.low_24h.usd.toLocaleString()}</span>
+                            </p>
+                            <p className="flex justify-between text-xl">
+                            <span className="font-medium">Market Rank:</span> 
+                            <span>#{coinData.market_cap_rank}</span>
+                            </p>
                         </div>
-                </div>
+            </div>
                 </div>
             )}
-            <div className='flex justify-center items-center h-32'>
-                foot
-            </div>
+            <div className='pt-10'>
+             <Footer />
+             </div>
         </div>
     );
 }
