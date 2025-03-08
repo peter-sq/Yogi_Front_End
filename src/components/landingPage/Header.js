@@ -1,14 +1,15 @@
 import React from 'react'
 
 const Header = () => {
+    const handleWhatsAppClick = () => {
+        window.open("https://api.whatsapp.com/send/?phone=+2349056118474&text=y", "_blank");
+      };
   return (
         <header className="relative py-4 md:py-6">
             <div className="container px-4 mx-auto sm:px-6  lg:px-28">
                 <div className="flex items-center justify-between">
                     <div className="flex-shrink-0">
-                        <a href="#" title="" className="flex rounded outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
-                            <img className="w-auto h-8" src="https://d33wubrfki0l68.cloudfront.net/682a555ec15382f2c6e7457ca1ef48d8dbb179ac/f8cd3/images/logo.svg" alt="" />
-                        </a>
+                       <p className='text-2xl font-bold text-primary font-poppins'>YogiXChange</p>
                     </div>
                     {/*show hamburger on small screen */}
                     <div className="flex lg:hidden">
@@ -20,19 +21,19 @@ const Header = () => {
                     </div>
                       {/* Navbar items  */}
                     <div className="hidden lg:flex lg:ml-10 xl:ml-16 lg:items-center lg:justify-center lg:space-x-8 xl:space-x-16">
-                        <a href="#" title="" className="text-base font-poppins font-semibold text-gray-900 transition-all duration-200 rounded focus:outline-none  hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"> Home </a>
+                        <a href="/" title="" className="text-base font-poppins font-semibold text-gray-900 transition-all duration-200 rounded focus:outline-none  hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"> Home </a>
     
                         <a href="#" title="" className="text-base font-poppins font-semibold text-gray-900 transition-all duration-200 rounded focus:outline-none  hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"> About </a>
     
                         <a href="#" title="" className="text-base font-poppins font-semibold text-gray-900 transition-all duration-200 rounded focus:outline-none  hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"> Blog </a>
     
-                        <a href="#" title="" className="text-base font-poppins font-semibold text-gray-900 transition-all duration-200 rounded focus:outline-none  hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"> Market </a>
+                        <a href="/all-crypto" title="" className="text-base font-poppins font-semibold text-gray-900 transition-all duration-200 rounded focus:outline-none  hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"> Market </a>
+
+                        <a href="#" title="" className="text-base font-poppins font-semibold text-gray-900 transition-all duration-200 rounded focus:outline-none  hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"> Calculator </a>
                     </div>
     
                     <div className="hidden lg:ml-auto lg:flex lg:items-center lg:space-x-8 xl:space-x-10">
-
-    
-                        <a href="#" title="" className="px-5 py-2 text-base font-poppins font-bold leading-7 text-white transition-all duration-200 bg-buttonPrimary border border-transparent rounded-xl hover:bg-gray-900  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900" role="button">
+                        <a onClick={handleWhatsAppClick}  title="" className="px-5 py-2 text-base font-poppins font-bold leading-7 text-white transition-all duration-200 bg-buttonPrimary border border-transparent rounded-xl hover:bg-gray-900  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900" role="button">
                             Get Started
                         </a>
                     </div>

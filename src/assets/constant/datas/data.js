@@ -31,10 +31,7 @@ export const items = [
                 href: 'javascript:void()',
                 name: 'Support'
             },
-            {
-                href: 'javascript:void()',
-                name: 'Documentation'
-            },
+           
             {
                 href: 'javascript:void()',
                 name: 'Pricing'
@@ -67,16 +64,9 @@ export const items = [
         items: [
             {
                 href: 'javascript:void()',
-                name: 'Showcase'
+                name: 'Calculator'
             },
-            {
-                href: 'javascript:void()',
-                name: 'Roadmap'
-            },
-            {
-                href: 'javascript:void()',
-                name: 'Languages'
-            },
+          
             {
                 href: 'javascript:void()',
                 name: 'Blog'

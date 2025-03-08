@@ -1,7 +1,15 @@
-import React from 'react'
+import {React} from 'react'
+import { useNavigate } from 'react-router-dom';
 import Images from '../../assets/constant/images'
+import WhatsAppButton from '../WhatsappButton.js';
 
 const GetStarted = () => {
+    const handleWhatsAppClick = () => {
+        window.open("https://api.whatsapp.com/send/?phone=+2349056118474&text=y", "_blank");
+      };
+
+       const navigate = useNavigate();
+
   return (
     <div className='bg-background py-12'>
     <div className='text-center max-w-screen-xl mx-auto '>
@@ -63,9 +71,11 @@ const GetStarted = () => {
                 </div>
             ))}
            <div className='flex flex-row gap-4 py-6 px-6'>
-            <button aria-label="Get started with Yogi" className='w-full md:w-auto px-6 h-12 text-white bg-blue-600 hover:bg-white hover:text-primary border rounded-lg font-poppins text-lg transition-all duration-300'>Get Started</button>
-            <button aria-label="View pricing options" className='w-full md:w-auto px-6 h-12 text-primary bg-white hover:text-white hover:bg-blue-600 border rounded-lg font-poppins text-lg transition-all duration-300'>View Pricing</button>
+            <button onClick={handleWhatsAppClick} aria-label="Get started with Yogi" className='w-full md:w-auto px-6 h-12 text-white bg-blue-600 hover:bg-white hover:text-primary border rounded-lg font-poppins text-lg transition-all duration-300'>Get Started</button>
+            <button onClick={() => navigate('./all-crypto')} aria-label="View pricing options" className='w-full md:w-auto px-6 h-12 text-primary bg-white hover:text-white hover:bg-blue-600 border rounded-lg font-poppins text-lg transition-all duration-300'>View Pricing</button>
+         
             </div>
+            <WhatsAppButton />
 
         </div>
     </div>
