@@ -1,10 +1,14 @@
 import React from 'react'
 import Images from '../../assets/constant/images';
 import { items } from '../../assets/constant/datas/data';
+import useAOS from '../../assets/constant/hooks/useAos';
 
 const Featues = () => {
+  useAOS(1000)
   return (
-    <div className='bg-feature py-12'>
+   
+    <div className=' bg-feature py-12'>
+       <div data-aos="fade-up">
       <div className='text-center max-w-screen-xl mx-auto '>
         <h4 className='font-poppins text-center text-primary text-lg
         font-bold'>
@@ -14,6 +18,8 @@ const Featues = () => {
        text-3xl tracking-normal leading-16 text-gray-900'>
             Full Featured to buy, <br/>trade and invest in crypto</p>
       </div>
+      </div>
+      <div data-aos="fade-up">
    <div className='flex flex-col px-4 md:px-10 lg:px-28'>
   <div className='flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-10'>
     <div className='flex-none w-full md:w-[65%] h-auto pt-8 px-6 md:px-12 bg-white rounded-2xl'>
@@ -71,10 +77,12 @@ const Featues = () => {
       </div>
     ))}
   </div>
-</div>
+    </div>
+    </div>
 
 
     </div>
+   
   )
 }
 

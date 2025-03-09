@@ -1,16 +1,11 @@
 import React, {useEffect} from 'react';
 import Images from '../../assets/constant/images';
 import Header from './Header';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
+import useAOS from '../../assets/constant/hooks/useAos';
 
 
-const Hero = () => {      
-    useEffect(() => {
-        Aos.init();
-        Aos.refresh();
-
-    }, []) 
+const Hero = () => {   
+    useAOS(1000);    
         return (
         <div className="relative bg-background ">
             <Header/>

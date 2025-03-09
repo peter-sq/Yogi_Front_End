@@ -2,16 +2,21 @@ import {React} from 'react'
 import { useNavigate } from 'react-router-dom';
 import Images from '../../assets/constant/images'
 import WhatsAppButton from '../WhatsappButton.js';
+import useAOS from '../../assets/constant/hooks/useAos.js';
 
 const GetStarted = () => {
+    //whatsapp icon
     const handleWhatsAppClick = () => {
         window.open("https://api.whatsapp.com/send/?phone=+2349056118474&text=y", "_blank");
       };
 
        const navigate = useNavigate();
+      //call Aos animation
+       useAOS(1000);
 
   return (
     <div className='bg-background py-12'>
+        <div data-aos="fade-up">
     <div className='text-center max-w-screen-xl mx-auto '>
       <h4 className='font-poppins text-center text-primary text-lg
       font-bold'>
@@ -20,6 +25,7 @@ const GetStarted = () => {
       <p className='py-4 font-sans font-extrabold text-center 
      text-3xl tracking-normal leading-16 text-gray-900'>
           Get Started with Yogi, <br/>In 3 Easy Steps</p>
+    </div>
     </div>
     <div className='flex flex-col md:flex-row px-6 py-8 md:px-14 md:py-14 lg:px-28 gap-y-8 md:gap-y-0 md:gap-x-16 lg:gap-x-60'>
     <div className='flex-none'>
@@ -36,26 +42,26 @@ const GetStarted = () => {
                 {
                     imgSrc: Images.group,
                     imgAlt: 'Group',
-                    title: '1. Download The App',
-                    description: 'The Brewer app is available on the App Store and Play Store for easy download.',
+                    title: '1. Contact Us',
+                    description: 'Contact us to get started with YogiXChange. We are available 24/7 to assist you.',
                 },
                 {
                     imgSrc: Images.wallet,
                     imgAlt: 'Wallet',
-                    title: '2. Create Your Wallet',
-                    description: 'Create your Yogi wallet with the fastest flow and the simplest layout.',
+                    title: '2. Confirm the Exchange Rate',
+                    description: 'We will provide you with the current exchange rate. Ensure you confirm and agree before proceeding.',
                 },
                 {
                     imgSrc: Images.btcc,
                     imgAlt: 'BTC',
-                    title: '3. Conduct Crypto Transactions',
-                    description: 'Conduct speedy crypto transactions using the Breew app today.',
+                    title: '3. Make Payment & Share Proof of Payment',
+                    description: 'Send the agreed amount to our verified bank account and Share proof of payment with us.',
                 },
                 {
                     imgSrc: Images.wallet,
                     imgAlt: 'Wallet',
-                    title: '4. Secure Your Wallet',
-                    description: 'Ensure your transactions are secure with our state-of-the-art security features.',
+                    title: '4. Trade Completed!',
+                    description: 'Your transaction is now complete! Feel free to reach out for any assistance.',
                 },
             ].map((step, index) => (
                 <div key={index} className='flex py-4 md:py-6'>
